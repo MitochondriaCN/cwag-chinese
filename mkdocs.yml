@@ -1,6 +1,7 @@
 site_name: 微积分与解析几何（在线中文版）
 theme: 
   language: zh
+  name: material
   features:
     - navigation.tabs
     - navigation.sections
@@ -9,6 +10,21 @@ theme:
 nav:
   - 首页: index.md
   - 第19章 偏导数:
-      - 19.3 曲面的切平面
+      - 19.3 曲面的切平面: 19/3.md
 plugins: 
   - blog
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
