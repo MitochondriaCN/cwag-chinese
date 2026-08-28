@@ -1,1 +1,14 @@
 site_name: 微积分与解析几何（在线中文版）
+theme: 
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.footer
+    - toc.follow
+nav:
+  - 首页: index.md
+  - 第19章 偏导数:
+      - 19.3 曲面的切平面
+plugins: 
+  - blog
