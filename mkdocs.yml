@@ -9,6 +9,8 @@ theme:
     - toc.follow
 nav:
   - 首页: index.md
+  - 第1章 数、函数与图像:
+    - 1.1 导论: 1/1.md
   - 第19章 偏导数:
       - 19.3 曲面的切平面: 19/3.md
 plugins: 
