@@ -14,6 +14,7 @@ nav:
     - 1.2 数轴与坐标平面 毕达哥拉斯: 1/2.md
   - 第19章 偏导数:
       - 19.3 曲面的切平面: 19/3.md
+      - 19.4 增量和微分 基本引理: 19/4.md
 plugins: 
   - blog
 markdown_extensions:
