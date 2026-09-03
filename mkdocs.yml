@@ -7,6 +7,10 @@ theme:
     - navigation.sections
     - navigation.footer
     - toc.follow
+    - search.suggest
+    - content.action.view
+  icon:
+    view: material/eye
 nav:
   - 首页: index.md
   - 第1章 数、函数与图像:
@@ -17,6 +21,9 @@ nav:
       - 19.4 增量和微分 基本引理: 19/4.md
 plugins: 
   - blog
+  - search:
+      lang: zh
+      jieba_dict: dict.txt
 markdown_extensions:
   - admonition
   - footnotes
@@ -29,6 +36,9 @@ markdown_extensions:
       generic: true
   - pymdownx.details
   - pymdownx.superfences
+repo_url: https://github.com/MitochondriaCN/cwag-chinese
+repo_name: MitochondriaCN/cwag-chinese
+edit_uri: edit/main/docs/
 extra_javascript:
   - assets/javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
