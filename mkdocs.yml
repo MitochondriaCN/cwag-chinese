@@ -1,4 +1,5 @@
 site_name: 微积分与解析几何（在线中文版）
+site_url: https://mitochondriacn.github.io/cwag-chinese/
 theme: 
   language: zh
   name: material
