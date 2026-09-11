@@ -1,0 +1,894 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mitochondriacn.github.io/cwag-chinese/19/5/">
+      
+      
+        <link rel="prev" href="../4/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>19.5 方向导数和梯度 - 微积分与解析几何（在线中文版）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#195" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-header__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            微积分与解析几何（在线中文版）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              19.5 方向导数和梯度
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="跟随系统深浅色模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="跟随系统深浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../1/1/" class="md-tabs__link">
+          
+  
+  
+  第1章 数、函数与图像
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../3/" class="md-tabs__link">
+          
+  
+  
+  第19章 偏导数
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-nav__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    微积分与解析几何（在线中文版）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 数、函数与图像
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第1章 数、函数与图像
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 数轴与坐标平面 毕达哥拉斯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第19章 偏导数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第19章 偏导数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.3 曲面的切平面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.4 增量和微分 基本引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.5 方向导数和梯度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/MitochondriaCN/cwag-chinese/raw/main/docs/19/5.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="195">19.5 方向导数和梯度<a class="headerlink" href="#195" title="Permanent link">&para;</a></h1>
+<p><span class="arithmatex">\(\DeclareMathOperator{\grad}{grad}\)</span></p>
+<p>设<span class="arithmatex">\(f(x,y,z)\)</span>为定义在三维空间中某区域内的函数（三个变量！），并设<span class="arithmatex">\(P\)</span>为该区域内一点. 当我们让<span class="arithmatex">\(P\)</span>沿着某个特定方向移动时，<span class="arithmatex">\(f\)</span>的变化率是多少？当沿着<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>轴正方向时，我们知道<span class="arithmatex">\(f\)</span>的变化率是偏导数<span class="arithmatex">\(\partial f/\partial x\)</span>、<span class="arithmatex">\(\partial f/\partial y\)</span>和<span class="arithmatex">\(\partial f/\partial z\)</span>. 但是如果我们让<span class="arithmatex">\(P\)</span>沿着非坐标轴方向移动，又该如何计算<span class="arithmatex">\(f\)</span>的变化率？在对这个问题的分析中，我们将会遇到一个极为重要的概念——函数的梯度. </p>
+<p>设我们研究的点<span class="arithmatex">\(P\)</span>有坐标<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>，所以<span class="arithmatex">\(P=(x,y,z)\)</span>；设<span class="arithmatex">\(\mathbf{R}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}\)</span>是<span class="arithmatex">\(P\)</span>的位置向量，并用单位向量<span class="arithmatex">\(\mathbf{u}\)</span>给出一个特定的方向，如图19.10<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. 如果我们把<span class="arithmatex">\(P\)</span>沿着这个方向移到<span class="arithmatex">\(Q=(x+\Delta x,y+\Delta y,z+\Delta z)\)</span>，那么函数<span class="arithmatex">\(f\)</span>就有变化量<span class="arithmatex">\(\Delta f\)</span>. 如果我们现在用<span class="arithmatex">\(P\)</span>和<span class="arithmatex">\(Q\)</span>之间的距离<span class="arithmatex">\(\Delta s=|\Delta \mathbf{R}|\)</span>来除这个变化量<span class="arithmatex">\(\Delta f\)</span>，那么商<span class="arithmatex">\(\Delta f/\Delta s\)</span>就是当我们把<span class="arithmatex">\(P\)</span>移到<span class="arithmatex">\(Q\)</span>时<span class="arithmatex">\(f\)</span>（关于距离）的平均变化率. 例如，如果<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(P\)</span>的值是这一点的温度，那么<span class="arithmatex">\(\Delta f/\Delta s\)</span>就是沿着线段<span class="arithmatex">\(PQ\)</span>温度的平均变化率. 当<span class="arithmatex">\(Q\)</span>趋近于<span class="arithmatex">\(P\)</span>时的极限，即所谓的</p>
+<div class="arithmatex">\[\frac{df}{ds}=\lim_{\Delta s\to 0}\frac{\Delta f}{\Delta s}\]</div>
+<p>就称为<strong><span class="arithmatex">\(f\)</span>在点<span class="arithmatex">\(P\)</span>处沿方向<span class="arithmatex">\(\mathbf{u}\)</span>的导数</strong>，简称<span class="arithmatex">\(f\)</span>的<strong>方向导数</strong>. 以温度函数为例，<span class="arithmatex">\(df/ds\)</span>表示当我们将<span class="arithmatex">\(P\)</span>沿<span class="arithmatex">\(\mathbf{u}\)</span>确定的方向移动时，温度关于距离的瞬时变化率——说直白点就是它热得有多快. </p>
+<p><img alt="图19.10" src="../19.10.png" /></p>
+<p>一切都非常好，但是在给定情形下，我们怎么才能实际计算出<span class="arithmatex">\(df/ds\)</span>呢？为了探索其做法，我们假设<span class="arithmatex">\(f(x,y,z)\)</span>有关于<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>的连续偏导数. 为了避免重复这个冗长单调的假设，如无特别说明，不妨把它作为所讨论的每个函数的基本设定. 此时，基本引理就使得我们可以用这种形式写出<span class="arithmatex">\(\Delta f\)</span>：</p>
+<div class="arithmatex">\[\Delta f=\frac{\partial f}{\partial x}\Delta x+\frac{\partial f}{\partial y}\Delta y+\frac{\partial f}{\partial z}\Delta z+\epsilon_1\Delta x+\epsilon_2 \Delta y+\epsilon_3\Delta z \tag{1}\]</div>
+<p>当<span class="arithmatex">\(\Delta x\)</span>、<span class="arithmatex">\(\Delta y\)</span>和<span class="arithmatex">\(\Delta z\to 0\)</span>也即<span class="arithmatex">\(\Delta s \to 0\)</span>时，<span class="arithmatex">\(\epsilon_1, \epsilon_2, \epsilon_3 \to 0\)</span>. 用<span class="arithmatex">\(\Delta s\)</span>除<span class="arithmatex">\((1)\)</span>就有</p>
+<div class="arithmatex">\[\frac{\Delta f}{\Delta s}=\frac{\partial f}{\partial x}\frac{\Delta x}{\Delta s}+\frac{\partial f}{\partial y}\frac{\Delta y}{\Delta s}+\frac{\partial f}{\partial z}\frac{\Delta z}{\Delta s}+\epsilon_1\frac{\Delta x}{\Delta s}+\epsilon_2\frac{\Delta y}{\Delta s}+\epsilon_3\frac{\Delta z}{\Delta s} \tag{2}\]</div>
+<p>随后取<span class="arithmatex">\(\Delta s\to 0\)</span>时的极限，我们看到末尾三项趋于零，于是我们就得到方程</p>
+<div class="arithmatex">\[\frac{df}{ds}=\frac{\partial f}{\partial x}\frac{dx}{ds}+\frac{\partial f}{\partial y}\frac{dy}{ds}+\frac{\partial f}{\partial z}\frac{dz}{ds} \tag{3}\]</div>
+<p>这个方程应该理解为一种特殊的链式法则，当我们沿着过<span class="arithmatex">\(P\)</span>且与<span class="arithmatex">\(\mathbf{u}\)</span>平行的直线移动时，<span class="arithmatex">\(f\)</span>是<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>的函数，而<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>又分别是距离<span class="arithmatex">\(s\)</span>的函数，故<span class="arithmatex">\((3)\)</span>就展示了如何关于<span class="arithmatex">\(s\)</span>对<span class="arithmatex">\(f\)</span>微分. <sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p>我们注意到，<span class="arithmatex">\((3)\)</span>右端每个乘积中的第一个因子，只依赖于函数<span class="arithmatex">\(f\)</span>以及计算<span class="arithmatex">\(f\)</span>的偏导数时所取点<span class="arithmatex">\(P\)</span>的坐标，而每个乘积中的第二个因子是关于<span class="arithmatex">\(f\)</span>独立的，且仅依赖于计算<span class="arithmatex">\(df/ds\)</span>时的方向. 这些事实表明，<span class="arithmatex">\((3)\)</span>的右边应该被看作——并且被写成——两个向量的点积，如下：</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{df}{ds} &amp;= \left(\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k}\right) \cdot \left(\frac{dx}{ds}\mathbf{i}+\frac{dy}{ds}\mathbf{j}+\frac{dz}{ds}\mathbf{k}\right) \\
+&amp;= \left(\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k}\right) \cdot \frac{d\mathbf{R}}{ds}
+\end{align} \tag{4}
+\]</div>
+<p>这里第一个因子是一个向量，称为<span class="arithmatex">\(f\)</span>的<strong>梯度</strong>，符号记作<span class="arithmatex">\(\grad f\)</span><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>. 因此根据定义</p>
+<div class="arithmatex">\[\grad f=\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}+\frac{\partial f}{\partial z}\mathbf{k} \tag{5}\]</div>
+<p>有了这个记号，<span class="arithmatex">\((4)\)</span>就可以写成</p>
+<div class="arithmatex">\[\frac{df}{ds}=(\grad f) \cdot \frac{d\mathbf{R}}{ds} \tag{6}\]</div>
+<p>但是我们知道，<span class="arithmatex">\(d\mathbf{R}/ds\)</span>是一个单位向量，又因为它和<span class="arithmatex">\(\mathbf{u}\)</span>方向相同，所以它和<span class="arithmatex">\(\mathbf{u}\)</span>相等. 故式<span class="arithmatex">\((6)\)</span>就等价于</p>
+<div class="arithmatex">\[\frac{df}{ds}=(\grad f)\cdot \mathbf{u} \tag{7}\]</div>
+<p>这告诉我们怎样计算<span class="arithmatex">\(df/ds\)</span>，因为<span class="arithmatex">\((5)\)</span>对于给定的函数<span class="arithmatex">\(f\)</span>大概率是很好算的，随后求出给定点<span class="arithmatex">\(P\)</span>处的值，接着两个位置向量的点积<span class="arithmatex">\((7)\)</span>就很容易求. </p>
+<p>对于给定函数<span class="arithmatex">\(f\)</span>和给定点<span class="arithmatex">\(P\)</span>，<span class="arithmatex">\(\grad f\)</span>是一个可以平移的已知向量<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>，不妨将其尾部移到<span class="arithmatex">\(P\)</span>. 我们也把<span class="arithmatex">\(\mathbf{u}\)</span>的尾部移到<span class="arithmatex">\(P\)</span>，如图19.11所示. 为理解<span class="arithmatex">\(\grad f\)</span>的重要性，我们利用点积的定义，以及<span class="arithmatex">\(\mathbf{u}\)</span>是单位向量的事实，将<span class="arithmatex">\((7)\)</span>写成如下形式：</p>
+<div class="arithmatex">\[\frac{df}{ds}=|\grad f|\cos \theta \tag{8}\]</div>
+<p><img alt="图19.11" src="../19.11.png" /></p>
+<p>其中<span class="arithmatex">\(\theta\)</span>是<span class="arithmatex">\(\grad f\)</span>和<span class="arithmatex">\(\mathbf{u}\)</span>之间的夹角. 由于<span class="arithmatex">\(\mathbf{u}\)</span>的方向可以根据我们的需要来选择，从<span class="arithmatex">\((8)\)</span>立即可得梯度的第一个基本性质：</p>
+<div class="admonition info">
+<p class="admonition-title">性质1</p>
+<p>任意给定方向的方向导数<span class="arithmatex">\(df/ds\)</span>就是<span class="arithmatex">\(\grad f\)</span>在那个方向上的标量投影（如图19.11）. </p>
+</div>
+<p>从这个意义上说，单个向量<span class="arithmatex">\(\grad f\)</span>本身包含了函数<span class="arithmatex">\(f\)</span>在点<span class="arithmatex">\(P\)</span>处沿所有可能方向的方向导数信息. <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<p>接着，如果选定的<span class="arithmatex">\(\mathbf{u}\)</span>指向与<span class="arithmatex">\(\grad f\)</span>相同的方向，那么<span class="arithmatex">\(\theta = 0\)</span>，<span class="arithmatex">\(\cos \theta = 1\)</span>，此时由<span class="arithmatex">\((8)\)</span>可知<span class="arithmatex">\(df/ds\)</span>取得最大值，即在这个方向上<span class="arithmatex">\(f\)</span>增长最快. 而且，这个最大值等于<span class="arithmatex">\(|\grad f|\)</span>. 以上讨论给出了下面两个梯度的性质：</p>
+<div class="admonition info">
+<p class="admonition-title">性质2</p>
+<p>向量<span class="arithmatex">\(\grad f\)</span>指向<span class="arithmatex">\(f\)</span>增长最快的方向. </p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">性质3</p>
+<p>向量<span class="arithmatex">\(\grad f\)</span>的长度就是<span class="arithmatex">\(f\)</span>的最快增速. </p>
+</div>
+<p>上述性质表明，虽然式<span class="arithmatex">\((7)\)</span>和式<span class="arithmatex">\((8)\)</span>是等价的，但是它们在我们思考时扮演完全不同的角色，因为我们用<span class="arithmatex">\((7)\)</span>来计算<span class="arithmatex">\(df/ds\)</span>，用<span class="arithmatex">\((8)\)</span>来理解向量<span class="arithmatex">\(\grad f\)</span>的直观意义. </p>
+<p><strong>例1</strong> 若<span class="arithmatex">\(f(x,y,z)=x^2-y+z^2\)</span>，求点<span class="arithmatex">\((1,2,1)\)</span>处在向量<span class="arithmatex">\(4\mathbf{i}-2\mathbf{j}+4\mathbf{k}\)</span>方向的方向导数<span class="arithmatex">\(df/ds\)</span>. </p>
+<p><strong>解</strong> 在点<span class="arithmatex">\((1,2,1)\)</span>处，我们有<span class="arithmatex">\(\grad f=2x\mathbf{i}-\mathbf{j}+2z\mathbf{k}=2\mathbf{i}-\mathbf{j}+2\mathbf{k}\)</span>. 通过将给定的向量除以它的长度，我们得到一个所需方向的单位向量<span class="arithmatex">\(\mathbf{u}\)</span>：</p>
+<div class="arithmatex">\[\mathbf{u}=\frac{4\mathbf{i}-2\mathbf{j}+4\mathbf{k}}{\sqrt{16+4+16}}=\frac{2}{3}\mathbf{i}-\frac{1}{3}\mathbf{j}+\frac{2}{3}\mathbf{k}\]</div>
+<p>现由式<span class="arithmatex">\((7)\)</span>可得：</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{df}{ds} &amp;= (\grad f)\cdot \mathbf{u} \\
+&amp;= (2\mathbf{i}-\mathbf{j}+2\mathbf{k}) \cdot (\frac{2}{3}\mathbf{i}-\frac{1}{3}\mathbf{j}+\frac{2}{3}\mathbf{k}) = 3
+\end{align}
+\]</div>
+<p>因此，当我们从<span class="arithmatex">\((1,2,1)\)</span>向指定方向移动时，函数<span class="arithmatex">\(f\)</span>在每个单位距离上以<span class="arithmatex">\(3\)</span>个单位的速度增长. </p>
+<hr />
+<p><strong>例2</strong> 空气中每一点的温度由函数<span class="arithmatex">\(f(x,y,z)=x^2-y+z^2\)</span>给出. 一只位于<span class="arithmatex">\((1,2,1)\)</span>的蚊子想尽快到凉爽的地方去. 它应该往何方向飞？</p>
+<p><strong>解</strong> 例1中我们已经知道，点<span class="arithmatex">\((1,2,1)\)</span>处<span class="arithmatex">\(\grad f=2\mathbf{i}-\mathbf{j}+2\mathbf{k}\)</span>. 因为<span class="arithmatex">\(\grad f\)</span>的方向是温度增长最快的方向，所以蚊子应该往它的反方向飞，即<span class="arithmatex">\(-\grad f=-2\mathbf{i}+\mathbf{j}-2\mathbf{k}\)</span>. </p>
+<hr />
+<p>第四个基本性质在几何上很有用. 为解释它，我们记所讨论的点为<span class="arithmatex">\(P_0=(x_0,y_0,z_0)\)</span>，以此强调在讨论中它是个定点，同时记<span class="arithmatex">\(c_0\)</span>为我们的函数<span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(P_0\)</span>处的值. 使得<span class="arithmatex">\(f(x,y,z)\)</span>的值为<span class="arithmatex">\(c_0\)</span>的所有点的集合，一般而言就形成了一个过<span class="arithmatex">\(P_0\)</span>的等值面，其方程为<span class="arithmatex">\(f(x,y,z)=c_0\)</span>. 我们想说明的是，在<span class="arithmatex">\(P_0\)</span>处，向量<span class="arithmatex">\(\grad f\)</span>垂直于这个等值面，如图19.12所示. 为此，我们考虑曲面上过<span class="arithmatex">\(P_0\)</span>的一条曲线. 如果我们移动到曲线上邻近的一点<span class="arithmatex">\(Q\)</span>，并沿着曲线计量<span class="arithmatex">\(s\)</span>，那么<span class="arithmatex">\(\Delta f=0\)</span>，因为<span class="arithmatex">\(f\)</span>在这个曲面上每个点的值都相同；进而在<span class="arithmatex">\(P_0\)</span>处，在曲线的切线方向上，<span class="arithmatex">\(df/ds=0\)</span>. 式<span class="arithmatex">\((6)\)</span>依然成立，并表明</p>
+<div class="arithmatex">\[(\grad f)\cdot \frac{d\mathbf{R}}{ds}=0 \tag{9}\]</div>
+<p>其中<span class="arithmatex">\(d\mathbf{R}/ds\)</span>就是在<span class="arithmatex">\(P_0\)</span>处曲线的单位切向量. <span class="arithmatex">\((9)\)</span>中点积为零告诉我们，<span class="arithmatex">\(\grad f\)</span>是垂直于这个切向量的. 而且，同样的推理对曲面上任何过<span class="arithmatex">\(P_0\)</span>的曲线都成立，所以<span class="arithmatex">\(\grad f\)</span>与这些曲线的切向量都垂直. 又因为这些切向量决定了<span class="arithmatex">\(P_0\)</span>处的切平面，而与曲面垂直也就是与这个切平面垂直，遂有：</p>
+<div class="admonition info">
+<p class="admonition-title">性质4</p>
+<p>函数<span class="arithmatex">\(f(x,y,z)\)</span>在点<span class="arithmatex">\(P_0\)</span>处的梯度垂直于<span class="arithmatex">\(f\)</span>的过<span class="arithmatex">\(P_0\)</span>的等值面. </p>
+</div>
+<p><img alt="图19.12" src="../19.12.png" /></p>
+<p>接着刚才的讨论，我们指出，任何曲面的方程都可以写成<span class="arithmatex">\(f(x,y,z)=c_0\)</span>的形式，从而可以被看作函数<span class="arithmatex">\(f(x,y,z)\)</span>的一个等值面. <sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>若<span class="arithmatex">\(P_0=(x_0,y_0,z_0)\)</span>是这个曲面上的一点，性质4就告诉我们，向量</p>
+<div class="arithmatex">\[\mathbf{N}=\grad f=\left(\frac{\partial f}{\partial x}\right)_{P_0}\mathbf{i}+\left(\frac{\partial f}{\partial y}\right)_{P_0}\mathbf{j}+\left(\frac{\partial f}{\partial z}\right)_{P_0}\mathbf{k}\]</div>
+<p>垂直于<span class="arithmatex">\(P_0\)</span>处的切平面；所以若<span class="arithmatex">\(\mathbf{N} \neq 0\)</span>，这个切平面的方程就是</p>
+<div class="arithmatex">\[\left(\frac{\partial f}{\partial x}\right)_{P_0}(x-x_0)+\left(\frac{\partial f}{\partial y}\right)_{P_0}(y-y_0)+\left(\frac{\partial f}{\partial z}\right)_{P_0}(z-z_0)=0 \tag{10}\]</div>
+<p>注意到，<a href="../3/">19.3节</a>方程<span class="arithmatex">\((4)\)</span>是这个方程的一种特例，因为如果曲面以<span class="arithmatex">\(z=g(x,y)\)</span>的形式给出，那么这就可以写成<span class="arithmatex">\(g(x,y)-z=0\)</span>，从而曲面就是函数<span class="arithmatex">\(f(x,y,z)=g(x,y)-z\)</span>的一个等值面，这就使得<span class="arithmatex">\((10)\)</span>中的系数分别等于<span class="arithmatex">\(g_x(x_0,y_0)\)</span>、<span class="arithmatex">\(g_y(x_0,y_0)\)</span>、<span class="arithmatex">\(-1\)</span>. </p>
+<p><strong>例3</strong> 求曲面<span class="arithmatex">\(xy^2z^3=12\)</span>在点<span class="arithmatex">\((3,-2,1)\)</span>处的切平面方程. </p>
+<p><strong>解</strong> 这个曲面是函数<span class="arithmatex">\(f(x,y,z)=xy^2z^3\)</span>的一个等值面. 向量<span class="arithmatex">\(\grad f\)</span>在点<span class="arithmatex">\((3,-2,1)\)</span>处垂直于该点的曲面. 这个向量就是</p>
+<div class="arithmatex">\[
+\begin{align}
+\grad f &amp;= y^2z^3\mathbf{i}+2xyz^3\mathbf{j}+3xy^2z^2\mathbf{k} \\
+&amp;= 4\mathbf{i}-12\mathbf{j}+36\mathbf{k}=4(\mathbf{i}-3\mathbf{j}+9\mathbf{k})
+\end{align}
+\]</div>
+<p>因此切平面的方程为</p>
+<div class="arithmatex">\[(x-3)-3(y+2)+9(z-1)=0\]</div>
+<p>或</p>
+<div class="arithmatex">\[x-3y+9z=18\]</div>
+<hr />
+<p><strong>注记1</strong> 方向导数主要应用于几何学和三维物理问题. 不过，这些概念在二维中也可以定义，而且具备相似（但更简约）的性质. 因此，曲线<span class="arithmatex">\(f(x,y)=c_0\)</span>可以被看作函数<span class="arithmatex">\(z=f(x,y)\)</span>的一条等值线；而且如果这个函数的梯度被定义为</p>
+<div class="arithmatex">\[\grad f=\frac{\partial f}{\partial x}\mathbf{i}+\frac{\partial f}{\partial y}\mathbf{j}\]</div>
+<p>那么曲线上一点<span class="arithmatex">\(P_0\)</span>处的梯度是一个垂直于曲线的向量. <sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<p><strong>注记2</strong> 函数<span class="arithmatex">\(f(x,y,z)\)</span>的梯度可以被写成这种「算子形式」<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>：</p>
+<div class="arithmatex">\[\grad f=\left(\frac{\partial}{\partial x}\mathbf{i}+\frac{\partial}{\partial y}\mathbf{j}+\frac{\partial}{\partial z}\mathbf{k}\right)f\]</div>
+<p>函数<span class="arithmatex">\(f\)</span>前面的<strong>del算子</strong>一般记作符号<span class="arithmatex">\(\nabla\)</span>（一个反转的delta，读作「del」）<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>，也即</p>
+<div class="arithmatex">\[\nabla=\frac{\partial}{\partial x}\mathbf{i}+\frac{\partial}{\partial y}\mathbf{j}+\frac{\partial}{\partial z}\mathbf{k}\]</div>
+<p>这个del算子类似于我们熟悉的微分算子<span class="arithmatex">\(d/dx\)</span>，但也更复杂. 当del作用于函数<span class="arithmatex">\(f\)</span>，它产生一个向量，即向量<span class="arithmatex">\(\grad f\)</span>. 用这种记法，式<span class="arithmatex">\((5)\)</span>、<span class="arithmatex">\((6)\)</span>和<span class="arithmatex">\((7)\)</span>便成为</p>
+<div class="arithmatex">\[\grad f=\nabla f, \quad \frac{df}{ds}=\nabla f\cdot \frac{d\mathbf{R}}{ds}, \quad \frac{df}{ds}=\nabla f\cdot \mathbf{u}\]</div>
+<p>我们在第21章将会充分利用算子<span class="arithmatex">\(\nabla\)</span>. </p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>一定要注意，这是<strong>三变量函数</strong>的<strong>定义域</strong>图，<span class="arithmatex">\(z\)</span>轴也代表一个自变量，此图不表现函数值. ——译注&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>这句话的意思是，当移动<span class="arithmatex">\(P\)</span>的时候，由于方向是已定的，所以<span class="arithmatex">\(P\)</span>的坐标<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>就可以通过移动的距离<span class="arithmatex">\(s\)</span>得到，也就是<span class="arithmatex">\(x=x(s)\)</span>、<span class="arithmatex">\(y=y(s)\)</span>和<span class="arithmatex">\(z=z(s)\)</span>，所以<span class="arithmatex">\(f(x,y,z)\)</span>其实就是<span class="arithmatex">\(f(x(s),y(s),z(s))\)</span>. 因此，<span class="arithmatex">\(df/ds\)</span>就成了一个复合函数微分的问题. ——译注&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>同济《高等数学》记作粗体的<span class="arithmatex">\(\operatorname{\mathbf{grad}} f\)</span>，体现出它是个向量. ——译注&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>... a fixed vector which can be placed ... ——译注&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>这句话的意思是，有了<span class="arithmatex">\(\grad f\)</span>就<strong>足以算出</strong><span class="arithmatex">\(f\)</span>在<span class="arithmatex">\(P\)</span>点处所有方向的方向导数. ——译注&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>可以这样理解：曲面的方程就是含<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>、<span class="arithmatex">\(z\)</span>的方程，但是意义有两种. 第一种，等价化成<span class="arithmatex">\(z=f(x,y)\)</span>，这个曲面是<strong>二元</strong>函数<span class="arithmatex">\(z=f(x,y)\)</span>的图像；第二种，等价化成<span class="arithmatex">\(f(x,y,z)=c_0\)</span>，这个曲面是<strong>三元</strong>函数<span class="arithmatex">\(m=f(x,y,z)\)</span>的一个等值面，函数值为<span class="arithmatex">\(m=c_0\)</span>. 因为某些情况下这几种形式间可以互化，所以我们的看法也可以互化. 只是<span class="arithmatex">\(z\)</span>轴的意义是不同的，前者<span class="arithmatex">\(z\)</span>轴代表函数值，后者<span class="arithmatex">\(z\)</span>轴代表一个自变量. 举个例子：<span class="arithmatex">\(x^2+y+z=3\)</span>，化成第一种形式就是<span class="arithmatex">\(z=3-x^2-y\)</span>，那么曲面就是函数<span class="arithmatex">\(z=f(x,y)=3-x^2-y\)</span>的图像；化成第二种形式就是<span class="arithmatex">\(m=f(x,y,z)=x^2+y+z=3\)</span>，那么曲面就是函数<span class="arithmatex">\(f(x,y,z)=x^2+y+z\)</span>的一个等值面，在这个面上的点，函数值皆为<span class="arithmatex">\(3\)</span>. ——译注&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>与曲面同理，所谓垂直于曲线，实际上就是垂直于曲线在这一点的切线. ——译注&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>"operational form"——译注&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p><span class="arithmatex">\(\nabla\)</span>又称为<strong>向量微分算子</strong>或<strong>Nabla算子</strong>. ——译注&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../4/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 19.4 增量和微分 基本引理">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                19.4 增量和微分 基本引理
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
