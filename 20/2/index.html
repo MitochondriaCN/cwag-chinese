@@ -1,0 +1,1077 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mitochondriacn.github.io/cwag-chinese/20/2/">
+      
+      
+        <link rel="prev" href="../1/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>20.2 二重积分和累次积分 - 微积分与解析几何（在线中文版）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#202" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-header__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            微积分与解析几何（在线中文版）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20.2 二重积分和累次积分
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="跟随系统深浅色模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="跟随系统深浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../1/1/" class="md-tabs__link">
+          
+  
+  
+  第1章 数、函数与图像
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../19/3/" class="md-tabs__link">
+          
+  
+  
+  第19章 偏导数
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1/" class="md-tabs__link">
+          
+  
+  
+  第20章 重积分
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-nav__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    微积分与解析几何（在线中文版）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 数、函数与图像
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第1章 数、函数与图像
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 数轴与坐标平面 Pythagoras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第19章 偏导数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第19章 偏导数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.3 曲面的切平面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.4 增量和微分 基本引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.5 方向导数和梯度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.6 偏导数的链式法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.7 最大值与最小值问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19/8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.8 条件极值 Lagrange乘数法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第20章 重积分
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第20章 重积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20.1 体积作为累次积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20.2 二重积分和累次积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/MitochondriaCN/cwag-chinese/raw/main/docs/20/2.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="202">20.2 二重积分和累次积分<a class="headerlink" href="#202" title="Permanent link">&para;</a></h1>
+<p>二元函数的二重积分，是一元函数定积分在二维中的对应概念. 方便起见，这里把一元函数积分称为<strong>单积分</strong>，与概念<strong>二重积分</strong>相对. </p>
+<p>我们知道，单积分<span class="arithmatex">\(\int_a^b f(x)\,dx\)</span>的值取决于函数<span class="arithmatex">\(f(x)\)</span>和区间<span class="arithmatex">\([a,b]\)</span>. 在二重积分的情形中，区间<span class="arithmatex">\([a,b]\)</span>被替代为<span class="arithmatex">\(xy\)</span>平面中的区域<span class="arithmatex">\(R\)</span>. <span class="arithmatex">\(f(x,y)\)</span>在<span class="arithmatex">\(R\)</span>上的二重积分记作</p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA \tag{1}\]</div>
+<p>后文将会解释记号<span class="arithmatex">\(dA\)</span>的含义. </p>
+<p>我们回忆一下，在6.4节中，单积分被定义为特定求和的极限. 我们现在用基本相同的方式定义二重积分<span class="arithmatex">\((1)\)</span>. </p>
+<p>设想一个定义在<span class="arithmatex">\(xy\)</span>平面内一区域<span class="arithmatex">\(R\)</span>上的连续函数<span class="arithmatex">\(f(x,y)\)</span>. 有必要假定<span class="arithmatex">\(R\)</span>是<strong>有界的</strong>，这样一来，它就可以被一个充分大的矩形所包含，并且在任何方向上都不会趋于无穷；否则，正如单积分中<span class="arithmatex">\(a\)</span>或<span class="arithmatex">\(b\)</span>趋于无穷的情形那样，二重积分将会是<strong>反常的</strong>. </p>
+<p>我们着手用平行于坐标轴的网格线覆盖<span class="arithmatex">\(R\)</span>，如图20.6所示，其中相邻平行线之间的距离可以相等，也可以不等. 这些直线把平面分成许多小矩形. 有些矩形可能部分或全部逸出<span class="arithmatex">\(R\)</span>外，这些我们忽略. 其他的矩形则整个位于<span class="arithmatex">\(R\)</span>内，如果它们总共有<span class="arithmatex">\(n\)</span>个——我们假设至少有一个——那么我们用任意顺序给它们标号为<span class="arithmatex">\(1\)</span>到<span class="arithmatex">\(n\)</span>，并记第<span class="arithmatex">\(k\)</span>个矩形的面积为<span class="arithmatex">\(\Delta A_k\)</span>. 现在我们在第<span class="arithmatex">\(k\)</span>个矩形中选择任意一点<span class="arithmatex">\((x_k,y_k)\)</span>，写出求和式</p>
+<div class="arithmatex">\[\sum_{k=1}^n f(x_k,y_k) \Delta A_k \tag{2}\]</div>
+<p><img alt="图20.6" src="../20.6.png" /></p>
+<p>最后，想象越来越多的平行线被加进来形成网格，把已有的矩形分成更小的矩形，并考虑与这个分区更精细的平面相对应的求和<span class="arithmatex">\((2)\)</span>. 如果当<span class="arithmatex">\(n\)</span>趋于无穷且矩形的最大对角线（即所有矩形中最长的对角线）趋于零——无关于分割线和矩形内点<span class="arithmatex">\((x_k,y_k)\)</span>的选法——求和趋于一个特定的极限，那么二重积分<span class="arithmatex">\((1)\)</span>就定义为以下极限：</p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA = \lim \sum_{k=1}^n f(x_k,y_k) \Delta A_k \tag{3}\]</div>
+<p>目前看来，定义<span class="arithmatex">\((3)\)</span>与相应的单积分定义相比区别不大. 然而在二维中，存在某些不会出现在一维中的技术困难. 至少平面区域比区间<span class="arithmatex">\([a,b]\)</span>复杂多了. 不过，在足够通用的假设下，可以严格证明二重积分的存在. 具体而言，假设我们所考虑的区域包含其边界，而且这些边界由有限个光滑曲线构成，则已然足够. </p>
+<p>我们不应该想着把二重积分搞得特别理论化. 这是个难题，最好留待高级微积分课程去研究.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> 相反，我们希望强调二重积分的直观意义，并集中关注其几何和物理应用. </p>
+<p>作为该观点的一个示范，设<span class="arithmatex">\(z=f(x,y)\)</span>是<span class="arithmatex">\(xyz\)</span>空间中一曲面的方程，其位于区域<span class="arithmatex">\(R\)</span>的上面，因此在<span class="arithmatex">\(R\)</span>上<span class="arithmatex">\(f(x,y) \gt 0\)</span>，如图20.7. 那么<span class="arithmatex">\(f(x_k,y_k)\Delta A_k\)</span>大致就是图中小柱体的体积（高乘以底面积）；和式<span class="arithmatex">\((2)\)</span>就是许多这种体积的和，因此也大致是曲面下立体的总体积；而极限<span class="arithmatex">\((3)\)</span>，即二重积分</p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA \tag{1}\]</div>
+<p>则给出了立体的精确体积.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p><img alt="图20.7" src="../20.7.png" /></p>
+<p>显然，若<span class="arithmatex">\(f(x,y)\)</span>为常数，即<span class="arithmatex">\(f(x,y)=c\)</span>，那么</p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA = cA\]</div>
+<p>其中<span class="arithmatex">\(A\)</span>是区域<span class="arithmatex">\(R\)</span>的面积. 特别地，若<span class="arithmatex">\(f(x,y)=1\)</span>，则有</p>
+<div class="arithmatex">\[\iint_R dA=A\]</div>
+<p>我们也指出，在定义<span class="arithmatex">\((3)\)</span>中，并没有要求<span class="arithmatex">\(f(x,y)\)</span>必须为正. 如果<span class="arithmatex">\(f(x,y)\)</span>既可为正也可为负，那么二重积分表示一个<strong>代数体积<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></strong>，而不是几何体积；即<span class="arithmatex">\(z=f(x,y)\)</span>和<span class="arithmatex">\(xy\)</span>平面之间的体积当<span class="arithmatex">\(f(x,y) \gt 0\)</span>时为正，当<span class="arithmatex">\(f(x,y) \lt 0\)</span>时为负. </p>
+<p>由于各边平行于坐标轴的矩形的面积可被写成<span class="arithmatex">\(\Delta A=\Delta x \Delta y\)</span>，使用</p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dx\,dy \tag{4}\]</div>
+<p>作为二重积分<span class="arithmatex">\((1)\)</span>的替代记号，则是合理的. 这种形式下，二重积分类似于一个累次积分，而且事实上，我们稍后会解释，当区域<span class="arithmatex">\(R\)</span>满足某种简单的形状时，二重积分<span class="arithmatex">\((1)\)</span>总等于一个选择恰当的累次积分. 这种等价性经常误导学生认为二重积分大致跟累次积分相同，实则不然. 我们下面细说这两种积分的区别. </p>
+<p>一个区域<span class="arithmatex">\(R\)</span>称为<strong>竖直简单的</strong>，当它能被描述为不等式</p>
+<div class="arithmatex">\[a \le x \le b, \quad y_1(x) \le y \le y_2(x) \tag{5}\]</div>
+<p>的形式，其中<span class="arithmatex">\(y=y_1(x)\)</span>和<span class="arithmatex">\(y=y_2(x)\)</span>是<span class="arithmatex">\([a,b]\)</span>上的连续函数. 这种区域如图20.8所示. 类似地，一个区域<span class="arithmatex">\(R\)</span>称为<strong>水平简单的</strong>，当它能被描述为不等式</p>
+<div class="arithmatex">\[c \le y \le d, \quad x_1(y) \le x \le x_2(y) \tag{6}\]</div>
+<p>的形式，其中<span class="arithmatex">\(x=x_1(y)\)</span>和<span class="arithmatex">\(x=x_2(y)\)</span>是<span class="arithmatex">\([c,d]\)</span>上的连续函数. 图20.9中的区域具有这种性质. </p>
+<p><img alt="图20.8" src="../20.8.png" /></p>
+<p><img alt="图20.9" src="../20.9.png" /></p>
+<p>下面是关于使用累次积分来计算二重积分的基本事实：<strong>若<span class="arithmatex">\(R\)</span>为<span class="arithmatex">\((5)\)</span>给出的竖直简单区域，那么</strong></p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA = \int_a^b \int_{y_1(x)}^{y_2(x)} f(x,y)\,dy\,dx \tag{7}\]</div>
+<p><strong>又若<span class="arithmatex">\(R\)</span>为<span class="arithmatex">\((6)\)</span>给出的水平简单区域，那么</strong></p>
+<div class="arithmatex">\[\iint_R f(x,y)\,dA = \int_c^d \int_{x_1(y)}^{x_2(y)} f(x,y)\,dx\,dy \tag{8}\]</div>
+<p>除了其在计算二重积分方面显而易见的实践价值以外，这些等式还服务于澄清二重积分和累次积分之间的概念差异. 二重积分是与函数<span class="arithmatex">\(f(x,y)\)</span>和区域<span class="arithmatex">\(R\)</span>相关联的一个数，而这个数的存在和意义独立于任何特定的计算方法. 另一方面，一个累次积分就是<strong>自带一套计算流程</strong>的二重积分. 因此，每个累次积分都是二重积分，反之则不然. </p>
+<p><strong>例1</strong> 用两种不同的方法计算二重积分<span class="arithmatex">\(\iint_R 2xy\,dA\)</span>，其中<span class="arithmatex">\(R\)</span>是由抛物线<span class="arithmatex">\(x=y^2\)</span>和直线<span class="arithmatex">\(y=x\)</span>围成的区域.</p>
+<p><strong>解</strong> <strong>每次解二重积分前，画出积分区域<span class="arithmatex">\(R\)</span>是很有必要的. </strong>此题中，区域如图20.10所示. 显然<span class="arithmatex">\(R\)</span>是竖直简单的，其中<span class="arithmatex">\(a=0\)</span>，<span class="arithmatex">\(b=1\)</span>，<span class="arithmatex">\(y_1(x)=x\)</span>，<span class="arithmatex">\(y_2(x)=x^{1/2}\)</span>，因此由<span class="arithmatex">\((7)\)</span>得</p>
+<div class="arithmatex">\[
+\begin{align}
+\iint_R 2xy\,dA &amp;= \int_0^1 \int_x^{x^{1/2}} 2xy\,dy\,dx = \int_0^1 [xy^2]_x^{x^{1/2}}\,dx \\
+&amp;= \int_0^1 (x^2-x^3)\,dx = \frac{1}{3} - \frac{1}{4} = \frac{1}{12}
+\end{align}
+\]</div>
+<p>区域<span class="arithmatex">\(R\)</span>同样也是水平简单的，其中<span class="arithmatex">\(c=0\)</span>，<span class="arithmatex">\(d=1\)</span>，<span class="arithmatex">\(x_1(y)=y^2\)</span>，<span class="arithmatex">\(x_2(y)=y\)</span>，因此由<span class="arithmatex">\((8)\)</span>得</p>
+<div class="arithmatex">\[
+\begin{align}
+\iint_R 2xy\,dA &amp;= \int_0^1 \int_{y^2}^{y} 2xy\,dx\,dy = \int_0^1 [x^2y]_{y^2}^y\,dy \\
+&amp;= \int_0^1 (y^3-y^5)\,dy = \frac{1}{4}-\frac{1}{6}=\frac{1}{12}
+\end{align}
+\]</div>
+<p><img alt="图20.10" src="../20.10.png" /></p>
+<hr />
+<p><strong>例2</strong> 求<span class="arithmatex">\(\iint_R (1+2x)\,dA\)</span>，其中<span class="arithmatex">\(R\)</span>是由<span class="arithmatex">\(x=y^2\)</span>和<span class="arithmatex">\(x-y=2\)</span>围成的区域.</p>
+<p><strong>解</strong> 此区域如图20.11. 若要先对<span class="arithmatex">\(y\)</span>积分，再对<span class="arithmatex">\(x\)</span>积分，我们需要计算两个不同的积分，一个位于直线<span class="arithmatex">\(x=1\)</span>左边，一个在右边，因为对<span class="arithmatex">\(y\)</span>积分的积分限在这两块区域是不同的：</p>
+<div class="arithmatex">\[\iint_R (1+2x)\,dA = \int_0^1\int_{-\sqrt{x}}^{\sqrt{x}} (1+2x)\,dy\,dx + \int_1^4\int_{x-2}^{\sqrt{x}} (1+2x)\,dy\,dx\]</div>
+<p>另一种顺序则更简单，可得</p>
+<div class="arithmatex">\[
+\begin{align}
+\iint_R (1+2x)\,dA &amp;= \int_{-1}^{2}\int_{y^2}^{y+2} (1+2x)\,dx\,dy = \int_{-1}^{2} [x+x^2]_{y^2}^{y+2}\,dy \\
+&amp;= \int_{-1}^{2} (6+5y-y^4)\,dy = \frac{189}{10}
+\end{align}
+\]</div>
+<p><img alt="图20.11" src="../20.11.png" /></p>
+<hr />
+<p>例2说明，即便区域<span class="arithmatex">\(R\)</span>既竖直简单又水平简单，用一个顺序积分也可能比另一个顺序更容易，我们自然是希望做得越容易越好. 有时积分顺序的选择取决于被积函数<span class="arithmatex">\(f(x,y)\)</span>的特性，因为或许用某种顺序计算积分很难甚至不可能，但是<strong>如果顺序反过来</strong>就好做多了. </p>
+<p><strong>例3</strong> 求</p>
+<div class="arithmatex">\[\int_0^1 \int_{2y}^2 4e^{x^2}\,dx\,dy\]</div>
+<p><strong>解</strong> 我们不能用这种顺序积分，因为<span class="arithmatex">\(\int e^{x^2}\,dx\)</span>并非初等函数. 因此我们尝试别的顺序. 这需要我们根据给定累次积分的积分限画出区域<span class="arithmatex">\(R\)</span>. <span class="arithmatex">\(R\)</span>如图20.12，在另一种顺序下，上述二重积分的值为</p>
+<div class="arithmatex">\[
+\begin{align}
+\iint_R 4e^{x^2}\,dA &amp;= \int_0^2 \int_0^{x/2} 4e^{x^2}\,dy\,dx = \int_0^2 \left[4ye^{x^2}\right]_0^{x/2}\,dx \\
+&amp;= \int_0^2 2xe^{x^2}\,dx = [e^{x^2}]_0^2 = e^4-1
+\end{align}
+\]</div>
+<p><img alt="图20.12" src="../20.12.png" /></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>即便到了这个层次，也需要学习传统的那种高级微积分. 例如，见Philip Franklin的<em>A Treatise on Advanced Calculus</em>（Wiley，1940）；或Angus E. Taylor的<em>Advanced Calculus</em>（Ginn，1955）.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>二重积分<span class="arithmatex">\((1)\)</span>实则是三维空间中一个<strong>区域</strong>的体积，不过说成一个<strong>立体</strong>的体积貌似更自然.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Algebraic volume，或曰<strong>带符号体积</strong>. ——译注&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 20.1 体积作为累次积分">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                20.1 体积作为累次积分
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

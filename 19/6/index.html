@@ -1,0 +1,1142 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mitochondriacn.github.io/cwag-chinese/19/6/">
+      
+      
+        <link rel="prev" href="../5/">
+      
+      
+        <link rel="next" href="../7/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>19.6 偏导数的链式法则 - 微积分与解析几何（在线中文版）</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#196" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-header__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            微积分与解析几何（在线中文版）
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              19.6 偏导数的链式法则
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到浅色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到浅色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到深色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到深色模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="跟随系统深浅色模式"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="跟随系统深浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../1/1/" class="md-tabs__link">
+          
+  
+  
+  第1章 数、函数与图像
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../3/" class="md-tabs__link">
+          
+  
+  
+  第19章 偏导数
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../20/1/" class="md-tabs__link">
+          
+  
+  
+  第20章 重积分
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="微积分与解析几何（在线中文版）" class="md-nav__button md-logo" aria-label="微积分与解析几何（在线中文版）" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    微积分与解析几何（在线中文版）
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/MitochondriaCN/cwag-chinese" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    MitochondriaCN/cwag-chinese
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第1章 数、函数与图像
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第1章 数、函数与图像
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 导论
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.2 数轴与坐标平面 Pythagoras
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第19章 偏导数
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第19章 偏导数
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.3 曲面的切平面
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.4 增量和微分 基本引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.5 方向导数和梯度
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.6 偏导数的链式法则
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.7 最大值与最小值问题
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    19.8 条件极值 Lagrange乘数法
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    第20章 重积分
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    第20章 重积分
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20.1 体积作为累次积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../20/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    20.2 二重积分和累次积分
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/MitochondriaCN/cwag-chinese/raw/main/docs/19/6.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
+    </a>
+  
+
+
+<h1 id="196">19.6 偏导数的链式法则<a class="headerlink" href="#196" title="Permanent link">&para;</a></h1>
+<p><span class="arithmatex">\(\newcommand{\p}{\partial}\)</span></p>
+<p>一般导数的单变量链式法则告诉我们如何对复合函数求微分. 它表明，如果<span class="arithmatex">\(w\)</span>是<span class="arithmatex">\(x\)</span>的函数，<span class="arithmatex">\(x\)</span>又是第三个变量<span class="arithmatex">\(t\)</span>的函数，即<span class="arithmatex">\(w=f(x)\)</span>且<span class="arithmatex">\(x=g(t)\)</span>，那么</p>
+<div class="arithmatex">\[\frac{dw}{dt}=\frac{dw}{dx}\frac{dx}{dt} \tag{1}\]</div>
+<p>大量经验表明，这是微积分的一个不可或缺的工具；它比任何其他的微分法则都更常用. </p>
+<p>最简单的多变量链式法则需要一个函数<span class="arithmatex">\(w=f(x,y)\)</span>，它有两个变量<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>，其中<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>又都是另一个变量<span class="arithmatex">\(t\)</span>的函数，<span class="arithmatex">\(x=g(t)\)</span>且<span class="arithmatex">\(y=h(t)\)</span>. 那么<span class="arithmatex">\(w\)</span>就是<span class="arithmatex">\(t\)</span>的函数，</p>
+<div class="arithmatex">\[w=f[g(t),h(t)]=F(t)\]</div>
+<p>同时，我们想要证明，这个复合函数的导数由下式给出：</p>
+<div class="arithmatex">\[\frac{dw}{dt}=\frac{\p w}{\p x}\frac{dx}{dt}+\frac{\p w}{\p y}\frac{dy}{dt} \tag{2}\]</div>
+<p>这就是此种情形下的<strong>链式法则</strong>. </p>
+<p>证明<span class="arithmatex">\((2)\)</span>很容易. 我们着手将<span class="arithmatex">\(t\)</span>变化到<span class="arithmatex">\(t+\Delta t\)</span>，其中<span class="arithmatex">\(\Delta t \neq 0\)</span>. 这个<span class="arithmatex">\(t\)</span>的增量导致了<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>的增量<span class="arithmatex">\(\Delta x\)</span>和<span class="arithmatex">\(\Delta y\)</span>，两者又依次导致<span class="arithmatex">\(w\)</span>的增量<span class="arithmatex">\(\Delta w\)</span>. 由于我们假定所讨论的所有函数都有连续偏导数，那么基本引理就允许我们以这种形式写出<span class="arithmatex">\(\Delta w\)</span>：</p>
+<div class="arithmatex">\[\Delta w=\frac{\p w}{\p x}\Delta x+\frac{\p w}{\p y}\Delta y+\epsilon_1 \Delta x+\epsilon_2 \Delta y \tag{3}\]</div>
+<p>其中<span class="arithmatex">\(\Delta x\)</span>和<span class="arithmatex">\(\Delta y\to 0\)</span>时，<span class="arithmatex">\(\epsilon_1\)</span>和<span class="arithmatex">\(\epsilon_2 \to 0\)</span>. 再用<span class="arithmatex">\(\Delta t\)</span>除<span class="arithmatex">\((3)\)</span>，就有</p>
+<div class="arithmatex">\[\frac{\Delta w}{\Delta t}=\frac{\p w}{\p x}\frac{\Delta x}{\Delta t}+\frac{\p w}{\p y}\frac{\Delta y}{\Delta t}+\epsilon_1\frac{\Delta x}{\Delta t}+\epsilon_2\frac{\Delta y}{\Delta t} \tag{4}\]</div>
+<p>如果我们现在令<span class="arithmatex">\(\Delta t\to 0\)</span>取极限，那么<span class="arithmatex">\(\Delta x\)</span>和<span class="arithmatex">\(\Delta y\)</span>也<span class="arithmatex">\(\to 0\)</span>，因此<span class="arithmatex">\(\epsilon_1\)</span>和<span class="arithmatex">\(\epsilon_2 \to 0\)</span>，于是由<span class="arithmatex">\((4)\)</span>立即可得<span class="arithmatex">\((2)\)</span>. </p>
+<p><strong>例1</strong> 若<span class="arithmatex">\(w=3x^2+2xy-y^2\)</span>，其中<span class="arithmatex">\(x=\cos t\)</span>且<span class="arithmatex">\(y=\sin t\)</span>，求<span class="arithmatex">\(dw/dt\)</span>. </p>
+<p><strong>解</strong> 式<span class="arithmatex">\((2)\)</span>告诉我们，</p>
+<div class="arithmatex">\[\frac{dw}{dt}=(6x+2y)(-\sin t)+(2x-2y)\cos t\]</div>
+<p>通过代换<span class="arithmatex">\(x=\cos t\)</span>和<span class="arithmatex">\(y=\sin t\)</span>，我们可以将其表示成只含<span class="arithmatex">\(t\)</span>的形式：</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{dw}{dt} &amp;= (6\cos t+2\sin t)(-\sin t)+(2\cos t-2\sin t)(\cos t) \\
+&amp;= -6\sin t\cos t-2\sin^2 t+2\cos^2 t-2\sin t\cos t \\
+&amp;= 2(\cos^2 t-\sin^2 t)-8\sin t\cos t = 2\cos 2t-4\sin 2t
+\end{align}
+\]</div>
+<p>我们可以通过先代换再微分来验证这个结果，得出</p>
+<div class="arithmatex">\[w=3\cos^2 t+2\sin t\cos t-\sin^2 t\]</div>
+<p>从而</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{dw}{dt} &amp;= 6\cos t(-\sin t)+2\sin t(-\sin t)+2\cos^2 t-2\sin t\cos t \\
+&amp;= 2(\cos^2 t-\sin^2 t)-8\sin t\cos t = 2\cos 2t-4\sin 2t
+\end{align}
+\]</div>
+<p>和之前一样. </p>
+<hr />
+<p>在式<span class="arithmatex">\((2)\)</span>的情形中，为方便起见，<span class="arithmatex">\(w\)</span>称为<strong>因变量</strong>，<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>称为<strong>中间变量</strong>，<span class="arithmatex">\(t\)</span>称为<strong>自变量</strong>. 注意到<span class="arithmatex">\((2)\)</span>的右边有两项，每个中间变量各对应一项，而且每一项都类似于单变量链式法则<span class="arithmatex">\((1)\)</span>的右边. </p>
+<p>式<span class="arithmatex">\((2)\)</span>显然可拓展到任意个中间变量. 例如，如果<span class="arithmatex">\(w=f(x,y,z)\)</span>而<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>又都是<span class="arithmatex">\(t\)</span>的函数，那么</p>
+<div class="arithmatex">\[\frac{dw}{dt}=\frac{\p w}{\p x}\frac{dx}{dt}+\frac{\p w}{\p y}\frac{dy}{dt}+\frac{\p w}{\p z}\frac{dz}{dt} \tag{5}\]</div>
+<p>其证明与<span class="arithmatex">\((2)\)</span>的证明本质相同，无非是运用了三变量而非二变量的基本引理. </p>
+<p>更进一步，上述的<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>未必是单个自变量的函数，还可以是两个或更多自变量的函数. 因此，若<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>各自是变量<span class="arithmatex">\(t\)</span>和<span class="arithmatex">\(u\)</span>的函数，那么<span class="arithmatex">\(w\)</span>也同样是<span class="arithmatex">\(t\)</span>和<span class="arithmatex">\(u\)</span>的函数，而它的偏导数就是</p>
+<div class="arithmatex">\[\frac{\p w}{\p t}=\frac{\p w}{\p x}\frac{\p x}{\p t}+\frac{\p w}{\p y}\frac{\p y}{\p t}+\frac{\p w}{\p z}\frac{\p z}{\p t} \tag{6}\]</div>
+<p>以及</p>
+<div class="arithmatex">\[\frac{\p w}{\p u}=\frac{\p w}{\p x}\frac{\p x}{\p u}+\frac{\p w}{\p y}\frac{\p y}{\p u}+\frac{\p w}{\p z}\frac{\p z}{\p u} \tag{7}\]</div>
+<p>我们在这里每一处都用弯背的<span class="arithmatex">\(d\)</span>，因为每个函数都依赖于一个以上变量. 这种式子里字母的意义必须非常清楚. 比如，在<span class="arithmatex">\((6)\)</span>的左边，<span class="arithmatex">\(w\)</span>视作<span class="arithmatex">\(t\)</span>和<span class="arithmatex">\(u\)</span>的函数，而在右边它被视作<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>和<span class="arithmatex">\(z\)</span>的函数. 证明和之前一样，而且所有这些式子——<span class="arithmatex">\((2)\)</span>、<span class="arithmatex">\((5)\)</span>、<span class="arithmatex">\((6)\)</span>、<span class="arithmatex">\((7)\)</span>及其在任意个中间变量和自变量下的拓展——统称为<strong>链式法则</strong>. </p>
+<p>在19.4节，我们定义了函数<span class="arithmatex">\(w=f(x,y,z)\)</span>的微分<span class="arithmatex">\(dw\)</span>：</p>
+<div class="arithmatex">\[dw=\frac{\p w}{\p x}dx+\frac{\p w}{\p y}dy+\frac{\p w}{\p z}dz \tag{8}\]</div>
+<p>链式法则<span class="arithmatex">\((5)\)</span>告诉我们，如果<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>、<span class="arithmatex">\(z\)</span>自身是单个自变量<span class="arithmatex">\(t\)</span>的函数，那么就可以在形式上将<span class="arithmatex">\((8)\)</span>除以<span class="arithmatex">\(dt\)</span>，来计算<span class="arithmatex">\(dw/dt\)</span>. 类似地，如果<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>、<span class="arithmatex">\(z\)</span>是自变量<span class="arithmatex">\(t\)</span>、<span class="arithmatex">\(u\)</span>的函数，我们想计算<span class="arithmatex">\(\p w/\p t\)</span>，那么链式法则<span class="arithmatex">\((6)\)</span>就告诉我们，可以将<span class="arithmatex">\((8)\)</span>除以<span class="arithmatex">\(dt\)</span>，再把普通的<span class="arithmatex">\(d\)</span>写成弯背的<span class="arithmatex">\(d\)</span>，表示此时还有另一个保持不变的自变量存在，从而求出<span class="arithmatex">\(\p w/\p t\)</span>. </p>
+<p><span class="arithmatex">\((8)\)</span>右边的各项有时称为<span class="arithmatex">\(w\)</span>关于<span class="arithmatex">\(x\)</span>、<span class="arithmatex">\(y\)</span>、<span class="arithmatex">\(z\)</span>的<strong>偏微分</strong>. 在这种观点下，<span class="arithmatex">\((8)\)</span>中定义的量<span class="arithmatex">\(dw\)</span>应称为<strong>全微分</strong>，正如我们在19.4节中提到的那样. </p>
+<p><strong>例2</strong> 若一个多变量函数对每个变量乘以<span class="arithmatex">\(t\)</span>（<span class="arithmatex">\(t \gt 0\)</span>）后，相当于对原始函数乘以<span class="arithmatex">\(t^n\)</span>，那就称之为<strong><span class="arithmatex">\(n\)</span>次齐次的</strong>. 因此，若<span class="arithmatex">\(f(x,y)\)</span>满足</p>
+<div class="arithmatex">\[f(tx,ty)=t^n f(x,y) \tag{9}\]</div>
+<p>那么它就是<span class="arithmatex">\(n\)</span>次齐次的. 例如，<span class="arithmatex">\(f(x,y)=x^2+3xy\)</span>是<span class="arithmatex">\(2\)</span>次齐次的，因为</p>
+<div class="arithmatex">\[f(tx,ty)=(tx)^2+3(tx)(ty)=t^2(x^2+3xy)=t^2f(x,y)\]</div>
+<p>类似地，<span class="arithmatex">\(f(x,y)=(x+y)/(x-y)\)</span>是<span class="arithmatex">\(0\)</span>次齐次的，<span class="arithmatex">\(f(x,y)=(xy-x^2e^{x/y})/y\)</span>是<span class="arithmatex">\(1\)</span>次齐次的，<span class="arithmatex">\(f(x,y,z)=\sqrt{x^3-3xy^2+2z^3}\)</span>是<span class="arithmatex">\(\frac{3}{2}\)</span>次齐次的. 多数函数，如<span class="arithmatex">\(f(x,y)=y^2+x\sin y\)</span>，则完全不是齐次的. </p>
+<p>欧拉提出一个具有重要应用的关于齐次函数的定理：<strong>若<span class="arithmatex">\(f(x,y)\)</span>是<span class="arithmatex">\(n\)</span>次齐次的，那么</strong></p>
+<div class="arithmatex">\[x\frac{\p f}{\p x}+y\frac{\p f}{\p y}=nf(x,y) \tag{10}\]</div>
+<p>为证明，我们保持<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>不变，然后对<span class="arithmatex">\((9)\)</span>的两边关于<span class="arithmatex">\(t\)</span>求导. 为使过程清晰，我们记<span class="arithmatex">\(u=tx\)</span>以及<span class="arithmatex">\(v=ty\)</span>，此时<span class="arithmatex">\((9)\)</span>成为</p>
+<div class="arithmatex">\[f(u,v)=t^n f(x,y)\]</div>
+<p>随后使用链式法则关于<span class="arithmatex">\(t\)</span>求导，得</p>
+<div class="arithmatex">\[\frac{\p f}{\p u}\frac{\p u}{\p t}+\frac{\p f}{\p v}\frac{\p v}{\p t}=nt^{n-1}f(x,y)\]</div>
+<p>即</p>
+<div class="arithmatex">\[x\frac{\p f}{\p u}+y\frac{\p f}{\p v}=nt^{n-1}f(x,y)\]</div>
+<p>再令<span class="arithmatex">\(t=1\)</span>即得<span class="arithmatex">\((10)\)</span>. 类似地，若<span class="arithmatex">\(f(x_1,x_2,\dots,x_m)\)</span>是<span class="arithmatex">\(n\)</span>次齐次的，那么同理可得</p>
+<div class="arithmatex">\[x_1\frac{\p f}{\p x_1}+x_2\frac{\p f}{\p x_2}+\dots+x_m\frac{\p f}{\p x_m}=nf(x_1,x_2,\dots,x_m)\]</div>
+<p>欧拉定理在经济学上有一些有趣的结论. 例如，设<span class="arithmatex">\(f(x,y)\)</span>是<span class="arithmatex">\(x\)</span>单位资本和<span class="arithmatex">\(y\)</span>单位劳动力所产生的产出（以美元计）. 若资本和劳动力的量都翻倍，那么容易想见，最后的产出也会翻倍，即<span class="arithmatex">\(f(2x,2y)=2f(x,y)\)</span>. 更一般地，设想</p>
+<div class="arithmatex">\[f(tx,ty)=tf(x,y)\]</div>
+<p>因此产出函数就是<span class="arithmatex">\(1\)</span>次齐次的. （在经济学中，<span class="arithmatex">\(f(x,y)\)</span>的这一性质称为<strong>规模报酬不变<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></strong>. ）此时欧拉定理表明：</p>
+<div class="arithmatex">\[f(x,y)=x\frac{\p f}{\p x}+y\frac{\p f}{\p y} \tag{11}\]</div>
+<p>偏导数<span class="arithmatex">\(\p f/\p x\)</span>和<span class="arithmatex">\(\p f/\p y\)</span>分别称为<strong>资本边际产出<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></strong>和<strong>劳动边际产出<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></strong>. 这样说来，<span class="arithmatex">\((11)\)</span>就是数量经济学中的一个定理，一般表述为：「如果资本和劳动都按照各自的边际产量获得报酬，那么，总产出的价值就等于资本的成本加上劳动的成本. 」这种情况下，没有任何剩余收益，在现实世界中这可糟透了. <sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<hr />
+<p><strong>例3</strong> 链式法则的许多应用，都涉及在引入新变量后，计算其对某方程或表达式的影响. 为演示一种在解19.9节中的波动方程时将很有用的方法，我们现在解偏微分方程</p>
+<div class="arithmatex">\[a\frac{\p w}{\p x}=\frac{\p w}{\p y}, \quad a \neq 0 \tag{12}\]</div>
+<p>也就是说，我们要找出满足这个方程的最一般的函数<span class="arithmatex">\(w=f(x,y)\)</span>. 为此，我们引入新自变量<span class="arithmatex">\(u\)</span>、<span class="arithmatex">\(v\)</span>，记</p>
+<div class="arithmatex">\[u=x+ay, \quad v=x-ay \tag{13}\]</div>
+<p>我们把<span class="arithmatex">\(w\)</span>视作<span class="arithmatex">\(u\)</span>和<span class="arithmatex">\(v\)</span>的函数，</p>
+<div class="arithmatex">\[w=F(u,v)\]</div>
+<p>接着我们运用链式法则，求等价于<span class="arithmatex">\((12)\)</span>的<span class="arithmatex">\(uv\)</span>方程：</p>
+<div class="arithmatex">\[
+\begin{align}
+\frac{\p w}{\p x} &amp;= \frac{\p w}{\p u}\frac{\p u}{\p x}+\frac{\p w}{\p v}\frac{\p v}{\p x}=\frac{\p w}{\p u}+\frac{\p w}{\p v}, \\
+\frac{\p w}{\p y} &amp;= \frac{\p w}{\p u}\frac{\p u}{\p y}+\frac{\p w}{\p v}\frac{\p v}{\p y}=a\frac{\p w}{\p u}-a\frac{\p w}{\p v}
+\end{align}
+\]</div>
+<p>再将这些表达式代入，我们发现<span class="arithmatex">\((12)\)</span>转化为偏微分方程</p>
+<div class="arithmatex">\[2a\frac{\p w}{\p v}=0\]</div>
+<p>或</p>
+<div class="arithmatex">\[\frac{\p w}{\p v}=0\]</div>
+<p>这个方程非常好解，因为它表示当保持<span class="arithmatex">\(u\)</span>不变而允许<span class="arithmatex">\(v\)</span>变动时，函数<span class="arithmatex">\(w=F(u,v)\)</span>是常数，因此它就只是<span class="arithmatex">\(u\)</span>的函数. 这就说明我们所求的<span class="arithmatex">\((12)\)</span>的解就是</p>
+<div class="arithmatex">\[w=g(u)=g(x+ay)\]</div>
+<p>其中<span class="arithmatex">\(g(u)\)</span>是一个关于<span class="arithmatex">\(u\)</span>的<strong>完全任意的</strong>（连续可微）函数. 我们向学生致歉，因为我们「毫无来由地」引入了看起来缺乏动机的变换方程<span class="arithmatex">\((13)\)</span>. 不过，19.9节中的一些进展将会让这种做法看起来十分自然. </p>
+<hr />
+<p><strong>例4</strong> 在热力学中，偏导数是主要的数学工具. 在这门科学中，为避免混乱，一种普遍的做法是对偏导数运用下标，点明在求导中保持不变的变量. 因此，若<span class="arithmatex">\(w=F(x,y)\)</span>，那么<span class="arithmatex">\(\p w/\p x\)</span>就记作</p>
+<div class="arithmatex">\[\left(\frac{\p w}{\p x}\right)_y\]</div>
+<p>这个记号告诉我们，<span class="arithmatex">\(w\)</span>正在被看作<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>的函数，而<span class="arithmatex">\(y\)</span>保持不变，<span class="arithmatex">\(x\)</span>是求导的变量. 这个记法看似有点多余，但是下面这种情况——在热力学中很常见——表明它并非多余. </p>
+<p>若<span class="arithmatex">\(w=f(x,y)\)</span>，其中<span class="arithmatex">\(y\)</span>又是<span class="arithmatex">\(x\)</span>和另一个变量<span class="arithmatex">\(t\)</span>的函数<span class="arithmatex">\(g(x,t)\)</span>，因此<span class="arithmatex">\(w\)</span>就是<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(t\)</span>的一个复合函数，我们对它关于<span class="arithmatex">\(x\)</span>求偏导. </p>
+<p>这是一个典型的链式法则情形，其中<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(y\)</span>为中间变量，<span class="arithmatex">\(x\)</span>和<span class="arithmatex">\(t\)</span>为自变量：</p>
+<div class="arithmatex">\[
+w=f(x,y), \quad
+\begin{cases}
+x = x \\
+y = g(x,t)
+\end{cases}
+\]</div>
+<p>于是由链式法则可得</p>
+<div class="arithmatex">\[\frac{\p w}{\p x}=\frac{\p w}{\p x}\frac{\p x}{\p x}+\frac{\p w}{\p y}\frac{\p y}{\p x} \tag{14}\]</div>
+<p>因此</p>
+<div class="arithmatex">\[\frac{\p w}{\p x}=\frac{\p w}{\p x}+\frac{\p w}{\p y}\frac{\p y}{\p x} \tag{15}\]</div>
+<div class="admonition warning">
+<p class="admonition-title">难点</p>
+</div>
+<p>不幸的是，这个等式包含两个<span class="arithmatex">\(w\)</span>关于<span class="arithmatex">\(x\)</span>的偏导数. 认真思考可以意识到，<span class="arithmatex">\((15)\)</span>左边的<span class="arithmatex">\(\p w/\p x\)</span>是复合函数的导数，而右边的<span class="arithmatex">\(\p w/\p x\)</span>则是<span class="arithmatex">\(w=f(x,y)\)</span>的导数. 即便如此，这个含糊的记号也导致了混乱，且与数学符号的总体精神相悖，即尽量节省思考且易于纠正. 然而，如果我们用热力学中的下标记号，那么<span class="arithmatex">\((14)\)</span>就可以写成</p>
+<div class="arithmatex">\[\left(\frac{\p w}{\p x}\right)_t=\left(\frac{\p w}{\p x}\right)_y\left(\frac{\p x}{\p x}\right)_t+\left(\frac{\p w}{\p y}\right)_x\left(\frac{\p y}{\p x}\right)_t\]</div>
+<p>由于<span class="arithmatex">\((\p x/\p x)_t=1\)</span>，即得</p>
+<div class="arithmatex">\[\left(\frac{\p w}{\p x}\right)_t=\left(\frac{\p w}{\p x}\right)_y+\left(\frac{\p w}{\p y}\right)_x\left(\frac{\p y}{\p x}\right)_t \tag{16}\]</div>
+<p>虽然有点烦琐，但是相较于<span class="arithmatex">\((15)\)</span>更不容易被误解. <sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>constant returns to scale——译注&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>marginal product of capital——译注&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>marginal product of labor——译注&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>这些话题的进阶资料，见J. M. Henderson和R. E. Quandt的<em>Microeconomic Theory</em>（McGraw-Hill，1971），81—84页；或D. E. James和C. D. Throsby的<em>Quantitative Methods in Economics</em>（Wiley，1973），第12章「Homogeneous Functions and Euler's Theorem」. 对于欧拉定理在高等理论力学中的应用，见本书作者的<em>Differential Equations</em>第二版（McGraw-Hill，1991），531页.&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>主要兴趣在于物理学的学生，可能想读一些关于这个话题的权威文献. 例如，见Enrico Fermi的<em>Thermodynamics</em>（Dover，1956），19页；Philip M. Morse的<em>Thermal Physics</em>（W. A. Benjamin，1969），28页；F. W. Sears的<em>Thermodynamics</em>（Addison-Wesley，1953），30—33、52—55页.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>对此，同济《高等数学》中也有一套解释，见同济《高等数学 下册》（第八版），78页. ——译注&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 19.5 方向导数和梯度">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                19.5 方向导数和梯度
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../7/" class="md-footer__link md-footer__link--next" aria-label="下一页: 19.7 最大值与最小值问题">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                19.7 最大值与最小值问题
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.footer", "toc.follow", "search.suggest", "content.action.view"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../assets/javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
