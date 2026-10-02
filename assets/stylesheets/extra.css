@@ -1,0 +1,4 @@
+/* Let supporting browsers add CJK-to-Latin and CJK-to-number spacing in body copy. */
+.md-content .md-typeset :is(p, li, dd, td, th, figcaption) {
+  text-autospace: ideograph-alpha ideograph-numeric;
+}
