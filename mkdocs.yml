@@ -1,6 +1,6 @@
 site_name: 微积分与解析几何（在线中文版）
 site_url: https://mitochondriacn.github.io/cwag-chinese/
-theme: 
+theme:
   language: zh
   name: material
   features:
@@ -20,7 +20,7 @@ theme:
         name: 切换到浅色模式
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
-      scheme: default 
+      scheme: default
       toggle:
         icon: material/brightness-7
         name: 切换到深色模式
@@ -45,7 +45,10 @@ nav:
   - 第20章 重积分:
       - 20.1 体积作为累次积分: 20/1.md
       - 20.2 二重积分和累次积分: 20/2.md
-plugins: 
+      - 20.3 二重积分的物理应用: 20/3.md
+  - 第21章 曲线积分和曲面积分:
+      - 21.1 平面上的曲线积分: 21/1.md
+plugins:
   - blog
   - search:
       lang: zh
@@ -67,6 +70,6 @@ repo_name: MitochondriaCN/cwag-chinese
 edit_uri: edit/main/docs/
 extra_javascript:
   - assets/javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - assets/javascripts/mathjax-3.2.2/es5/tex-mml-chtml.js
 extra_css:
   - assets/stylesheets/extra.css
